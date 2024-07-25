@@ -1,11 +1,14 @@
-function alterarStatus(elementId) {
-    let botao = document.getElementById(elementId);
+function alterarStatus(gameId) {
+    let botao = document.getElementById(gameId).querySelector('.dashboard__item__button');
+    let imagem = document.getElementById(gameId).querySelector('.dashboard__item__img');
 
-    if(botao.classList.contains('dashboard__item__button--return')) {
+    if (botao.classList.contains('dashboard__item__button--return')) {
         botao.classList.remove('dashboard__item__button--return');
-        document.getElementById(elementId).innerHTML = 'Alugar';
-    } else{
+        botao.innerHTML = 'Alugar';
+        imagem.classList.remove('dashboard__item__img--rented');
+    } else {
         botao.classList.add('dashboard__item__button--return');
-        document.getElementById(elementId).innerHTML = 'Devolver';
+        botao.innerHTML = 'Devolver';
+        imagem.classList.add('dashboard__item__img--rented');
     }
 }
