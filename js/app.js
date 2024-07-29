@@ -4,11 +4,11 @@ function alterarStatus(gameId) {
 
     if (botao.classList.contains('dashboard__item__button--return')) {
         botao.classList.remove('dashboard__item__button--return');
-        botao.innerHTML = 'Alugar';
+        botao.textContent = 'Alugar';
         imagem.classList.remove('dashboard__item__img--rented');
     } else {
         botao.classList.add('dashboard__item__button--return');
-        botao.innerHTML = 'Devolver';
+        botao.textContent = 'Devolver';
         imagem.classList.add('dashboard__item__img--rented');
     }
 }
